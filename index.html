@@ -5,9 +5,13 @@
 		<title>Shreya Vaidyanathan, Computer Science Engineer and Journalist </title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<nav>
+		<!--<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
 	        	<li><a href="/about">About</a></li>
@@ -15,6 +19,55 @@
         		<li><a href="/blog">Blog</a></li>
     		</ul>
 		</nav>
+		!-->
+		<nav class="text-center">
+    	<ul class="inline-block">
+      		<li class="pull-left active"><a href="#" data-direction="front">Home</a></li>
+            <li class="pull-left"><a href="#" data-direction="back">Portfolio</a></li>
+            <li class="pull-left"><a href="#" data-direction="top">About</a></li>
+            <li class="pull-left"><a href="#" data-direction="right">Contact</a></li>
+       		<div class="clearfix"></div>
+    	</ul>
+  		</nav>
+  		<div id="wrap">
+  		  <div class="cube">
+    	    <section class="page active face front" id="home">
+      			<div class="act-table text-center">
+        		<div class="act-table-cell ver-middle">Home Page</div>
+      			</div>
+    		</section>
+    		<section class="page face back" id="portfolio">
+      			<div class="act-table text-center">
+        		<div class="act-table-cell ver-middle">Portfolio Page</div>
+      			</div>
+    		</section>
+    		<section class="page face top" id="about">
+      			<div class="act-table text-center">
+        		<div class="act-table-cell ver-middle">about Page</div>
+      			</div>
+    		</section>
+    		<section class="page face right" id="contact">
+      			<div class="act-table text-center">
+        		<div class="act-table-cell ver-middle">contact Page</div>
+      			</div>
+    		</section>
+    		<section class="page face bottom" id="blog">
+      			<div class="act-table text-center">
+        		<div class="act-table-cell ver-middle">blog Page</div>
+      			</div>
+    		</section>
+    		<section class="page face left" id="article">
+      			<div class="act-table text-center">
+        		<div class="act-table-cell ver-middle">article Page</div>
+      			</div>
+    		</section>
+  		  </div>
+		</div>
+  
+  	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
 		<div class="container">
     		<div class="blurb">
         		<h1>Hi there, I'm Shreya!</h1>
