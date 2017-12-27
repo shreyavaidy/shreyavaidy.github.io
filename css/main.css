@@ -2,6 +2,7 @@ body {
     margin: 60px auto;
     width: 70%;
     background-color: #d7dde5;
+    background-color: #2D2F31; 
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -15,14 +16,15 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #ee6d66;
 }
 a:hover {
     text-decoration: underline;
 }
 h1{
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Abril Fatface';
+    color: #eee966;
 }
 h2,h3,h4{
     font-size: 2em;
@@ -31,10 +33,10 @@ h2,h3,h4{
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: #fad3d1;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #fad3d1;
     font-size: .8em;
 }
 
