@@ -4,6 +4,16 @@ body {
     background-color: #d7dde5;
     background-color: #2D2F31; 
 }
+
+.fade
+{
+        transition:all 0.3s ease;
+        opacity:0.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -21,19 +31,25 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 h1{
-    font-size: 3em;
+    font-size: 4em;
     font-family:'Abril Fatface';
     color: #eee966;
+    color: #38f7c1;
 }
-h2,h3,h4{
+h2,h3,{
     font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';   
+}
+h4{
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';       
 }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #fad3d1;
+    font-family: 'Josefin Slab';
 }
 footer {
     border-top: 1px solid #fad3d1;
@@ -47,4 +63,105 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+ul {
+    padding:0;
+    list-style: none;
+}
+
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-github {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-github:hover {
+    background-color: #6cc644;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-instagram:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-behance {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-behance:hover {
+    background-color: #e25714;
 }
