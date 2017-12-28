@@ -49,20 +49,6 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #fad3d1;
-    font-family: 'Josefin Slab';
-}
-footer {
-    border-top: 1px solid #fad3d1;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
