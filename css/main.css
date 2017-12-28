@@ -1,10 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 body {
     margin: 60px auto;
     width: 70%;
     background-color: #d7dde5;
     background-color: #2D2F31; 
 }
-
 .fade
 {
         transition:all 0.3s ease;
@@ -14,13 +16,13 @@ body {
 {
         opacity:1;
 }
-nav ul, footer ul {
+nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
-nav ul li, footer ul li {
+nav ul li {
     display: inline;
     margin-right: 20px;
 }
@@ -31,28 +33,31 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
 h1{
     font-size: 4em;
-    font-family:'Abril Fatface';
-    color: #eee966;
-    color: #38f7c1;
+    font-family:'Lato';
+    color: #efeaea;
 }
 h2,h3,{
     font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';   
+    color: #fad3d1;
 }
 h4{
+    font-size: 1.8em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';       
 }
 p {
     font-size: 1.5em;
+    font-family:'Open Sans';
     line-height: 1.4em;
     color: #fad3d1;
-}
 
-@import url(https://fonts.googleapis.com/css?family=Lato);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+}
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
 
 ul {
     padding:0;
