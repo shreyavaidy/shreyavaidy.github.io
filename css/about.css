@@ -166,9 +166,8 @@ ul.social-icons {
 
 .timeline ul {
   background: #252525;
-  padding: 50px 0;
+  padding: 10px 0;
 }
-
 .timeline ul li {
   list-style-type: none;
   position: relative;
@@ -177,20 +176,19 @@ ul.social-icons {
   padding-top: 50px;
   background: #fff;
 }
-
 .timeline ul li div {
   position: relative;
   bottom: 0;
   width: 400px;
   padding: 15px;
   background: #F45B69;
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  list-style: none;
+  font-weight: bold;
 }
-
 time {
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
 }
-
-
