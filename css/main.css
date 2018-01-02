@@ -1,6 +1,6 @@
-@import url(https://fonts..com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-googleapis
+
 body {
     margin: 60px auto;
     width: 70%;
@@ -154,17 +154,5 @@ ul.social-icons {
     background-color: #322f30;
 }
 .fa-behance:hover {
-    background-color: #e25714;
-}
-.fa-google-plus {
-    padding:10px 9px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #322f30;
-}
-.fa-google-plus:hover {
     background-color: #e25714;
 }
