@@ -1,4 +1,4 @@
-(function() {
+function() {
 
   'use strict';
 
@@ -30,4 +30,4 @@
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
 
-})();
+}
