@@ -154,10 +154,10 @@ ul.social-icons {
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition: .5s;
-    background-color: #FF0000;
+    background-color: #322f30;
 }
 .fa-google-plus:hover {
-    background-color: #e25714;
+    background-color: #FF0000;
 }
 
 
@@ -185,6 +185,7 @@ ul.social-icons {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
   list-style: none;
   font-weight: bold;
+  color: #efeded;
 }
 time {
   display: block;
