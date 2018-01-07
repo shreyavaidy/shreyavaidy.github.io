@@ -61,6 +61,7 @@ ul.posts {
 
 ul {
     padding:10px;
+    font-size: 1.2em;
     list-style: square;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: #fad3d1;
