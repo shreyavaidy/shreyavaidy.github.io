@@ -12,7 +12,7 @@
 body {
   margin: 60px auto;
   width: 70%;
-  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   background: #252525;
   color: #fff;
   overflow-x: hidden;
@@ -29,30 +29,45 @@ body {
         opacity:1;
 }
 nav ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
 nav ul li {
+    padding:10px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.2em;
+    color: #fad3d1;
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 h1{
     font-size: 4em;
     font-family:'Lato';
     color: #efeaea;
 }
-p {
-    font-size: 1.5em;
+h2{  
+    font-size: 2.5em;
+    padding-top: 20px;
     font-family:'Lato';
-    line-height: 1.4em;
+    color: #efeaea;
+}
+h3{
+    font-size: 1.5em;
+    padding-top: 20px;
+    font-family:'Lato';
     color: #fad3d1;
 }
-
+a {
+    text-decoration: none;
+    color: #ee6d66;
+}
+a:hover {
+    text-decoration: underline;
+}
 /**** SOCIAL MEDIA ICONS FOOTER ***/
 .footer-social-icons {
-    width: 350px;
+    width: 400px;
     display:block;
     margin: 0 auto;
 }
@@ -60,7 +75,7 @@ p {
     color: #fff;
 }
 ul.social-icons {
-    margin-top: 10px;
+    margin-top: 350px;
 }
 .social-icons li {
     vertical-align: top;
@@ -258,4 +273,16 @@ time {
   transform: none;
   visibility: visible;
   opacity: 1;
+}
+.divLeft {
+    padding-top: 10px;
+    width:200px;
+    display:block;
+    float: left;
+}
+.divRight {
+    padding-top: 10px;
+    width:200px;
+    display:block;
+    float: right;
 }
