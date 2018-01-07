@@ -60,8 +60,10 @@ ul.posts {
 }
 
 ul {
-    padding:0;
-    list-style: none;
+    padding:10px;
+    list-style: square;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: #fad3d1;
 }
 
 .footer-social-icons {
