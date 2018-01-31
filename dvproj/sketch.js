@@ -8,7 +8,7 @@ function draw() {
 
   textSize(32);
   fill('red');
-  text('<3 Vizualisation',10,60);
+  text('<3 Visualization',10,60);
   
   fill(51);
   quad(58, 151, 106, 120, 89, 203, 50, 236);
