@@ -59,6 +59,7 @@ p {
     font-family:'Helvetica';
     line-height: 1.4em;
     color: #fad3d1;
+    text-align: center;
 }
 ul.posts { 
     margin: 20px auto 40px; 
