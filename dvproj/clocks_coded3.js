@@ -30,8 +30,11 @@ function draw() {
   var h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
 
   // Draw the hands of the clock
-  arc(cx,cx-(cy/2),cx + cos(m) * hoursRadius, cy + sin(m) * hoursRadius, 0,0,OPEN); 
-
+  
+    arc(cx,cy,clockDiameter, clockDiameter, QUARTER_PI,HALF_PI); 
+    //rotateX(s);
+    //rotateY(S);
+  
   stroke('purple'); //setting color of the lines and arc
   strokeWeight(2);
   line(cx, cy, cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);

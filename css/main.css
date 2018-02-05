@@ -7,6 +7,17 @@ body {
     background-color: #d7dde5;
     background-color: #252525; 
 }
+.column {
+    float: left;
+}
+
+.left {
+    width: 75%;
+}
+
+.right {
+    width: 25%;
+}
 .fade
 {
         transition:all 0.3s ease;
