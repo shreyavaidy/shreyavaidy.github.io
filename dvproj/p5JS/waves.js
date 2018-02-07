@@ -27,7 +27,7 @@ function setup() {
 function draw() {
   //background("#79A888");
   background("#B4D7BF");
-  
+
   var s = second();
   var m = minute();
   var h = hour();
@@ -38,18 +38,29 @@ function draw() {
   text(time,485,25);  //setting color of time on topright corner
 
   fill(105,150,173,70);    //setting color of hour wave
-  beginShape();
 
+  beginShape();
   var xoff = 0;     
   for (var x = 0; x <= width; x += 10) {
     // Calculate a y value according to noise, map to hours
     var y = map(noise(xoff, yoff), 1, 12, 300, 600);    
-    //var y = minute();
-    // Set the vertex
+    //Set the vertex
     vertex(x, y);
     xoff += 0.15;  // Increment x dimension for noise
   }
   yoff += 0.01;     // Increment y dimension for noise
+  vertex(width, height);
+  vertex(0, height);
+  endShape(CLOSE);
+
+
+  fill(35,107,142, 60);    //setting color of minute wave
+  beginShape();
+  var xoff = 0;     
+  for (var x = 0; x <= width; x += 10) {
+    var y = minute()+100;
+    vertex(x, y);
+  }
   vertex(width, height);
   vertex(0, height);
   endShape(CLOSE);
