@@ -12,12 +12,23 @@ body {
 }
 
 .left {
-    width: 75%;
+    width: 70%;
+    font-size: 1.1em;
+    font-family:'Helvetica';
+    line-height: 1.4em;
+    color: #fad3d1;
+    text-align: left;
+}
+.right { 
+    width: 30%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.right {
-    width: 25%;
-}
 .fade
 {
         transition:all 0.3s ease;

@@ -1,20 +1,17 @@
 var fontUltra, fontReady = false;
 
-function fontRead(){
-    fontReady = true;
+function preload() {
+  fontUltra = loadFont('assets/Ultra.ttf');
 }
 
-function preload() {
-  fontUltra = loadFont("./assets/Ultra.ttf",fontReady);
-}
 function setup() {
   createCanvas(1040, 580);
+  background('#fad3d1');
 }
 
 function draw() {
 
-  background('#fad3d1');
-  textfont('fontUltra');
+  textFont(fontUltra);
   textSize(32);
   fill('red');
   text('<3 Visualization',10,60);
