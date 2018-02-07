@@ -10,6 +10,7 @@ function setup() {
 
 function draw() {
   background(0);
+  console.log("hello...");
   //pg.background(240, 150, 150);
   pg.background('#F0FFFF');
   noStroke();
