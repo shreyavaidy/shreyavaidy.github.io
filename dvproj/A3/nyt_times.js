@@ -2,6 +2,7 @@ var title = [];
 var facets = [];
 var dates = [];
 var times = [];
+var time = [];
 
 function preload() {
 
@@ -29,31 +30,41 @@ function draw() {
   var margin = 50;
 
   push();
+
   textStyle(BOLD);
   textAlign(CENTER);
-  textFont('Tahoma');
-  textSize(30);
-  fill("#90EE90");
-  text("TOP STORIES & TIME OF CREATION",width/2,20);
+  textFont('Trebuchet MS');
+  textSize(40);
+  //fill("$DCEDC8");
+  fill("#30B096");
+  text("TOP STORIES & TIME OF CREATION",width/2,50);
+  fill("#CAF270");
+  textSize(40);
+  text("TOP STORIES & TIME OF CREATION",width/2+2,53);
   pop();
 
-  translate(margin, margin+50);
+  translate(margin, margin+70);
+  fill("#c6e2ff");
+  textSize(15);
 
   for (var i = 0; i < facets.length; i++) {
-    fill(255);
-    textSize(15);
+
     var words = facets[i];
     var date_and_time = split(facets[i],'T');
     append(dates,date_and_time[0]);
     append(times,date_and_time[1]);
 
-    fill("#c6e2ff");
     //text(facets[i], 0, i*lineheight);
-
     text(title[i], 10, i*lineheight);
     text(dates[i], 700, i*lineheight);
-    text(times[i], 800, i*lineheight);
   }
+
+  for(var i=0; i < times.length; i++){
+    var t = split(times[i],'-');
+    append(time, t[0]);
+    text(time[i], 825, i*lineheight);
+  }
+
 
 }
 
