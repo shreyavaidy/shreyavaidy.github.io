@@ -1,0 +1,9 @@
+[user]
+	name = Shreya Vaidyanathan
+[user]
+	email = shreyavaidy@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
