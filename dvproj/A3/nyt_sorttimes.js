@@ -14,47 +14,45 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, 1200);
-  background(0);
+  createCanvas(800, 1000);
+  background("#252525");
 
   noLoop(); // runs draw() just once
   extract();     //User-defined function
 }
 
 function draw() {
-  background("#252525");
-  fill(200);
+  background(0);
 
-  var lineheight = 25;
-  var margin = 50;
+  var lineheight = 20;
+  var margin = 40;
+  translate(margin, margin);
 
-  push();
-  textStyle(BOLD);
-  textAlign(CENTER);
-  textFont('Tahoma');
-  textSize(30);
-  fill("#90EE90");
-  text("TOP STORIES & TIME OF CREATION",width/2,20);
-  pop();
+  var d = day();
 
-  translate(margin, margin+50);
+  var todays_date = "2018"+"-"+"02"+"-"+d;
+  //console.log(todays_date);
 
   for (var i = 0; i < facets.length; i++) {
-    fill(255);
-    textSize(15);
+    //fill(random(0,255));
+    fill(200);
     var words = facets[i];
     var date_and_time = split(facets[i],'T');
     append(dates,date_and_time[0]);
     append(times,date_and_time[1]);
 
-    fill("#c6e2ff");
+    //facets.sort();
     //text(facets[i], 0, i*lineheight);
-
-    text(title[i], 10, i*lineheight);
-    text(dates[i], 700, i*lineheight);
-    text(times[i], 800, i*lineheight);
+    text(title[i], 0, i*lineheight);
   }
 
+  for(var i = 0; i < dates.length; i++){
+    fill(255);
+    //text(times[i], 600, i*lineheight);
+    text(dates[i], 500, i*lineheight);
+  }
+  //console.log(dates);
+  //console.log(times);
 }
 
 function extract() {
@@ -69,7 +67,13 @@ function extract() {
 
     myDictionary.create(s,h);   //Add each of the titles and the corresponding date of creation to myDictionary
   }
-  //myDictionary.sort();
-  //console.log(myDictionary);
   //myDictionary.print();
+  myDictionary.sort((a, b)=>{
+      var keyA = new Date(a.updated_at),
+          keyB = new Date(b.updated_at);
+      // Compare the 2 dates
+      if(keyA < keyB) return -1;
+      if(keyA > keyB) return 1;
+      return 0;
+  });
 }

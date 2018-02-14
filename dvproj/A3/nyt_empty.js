@@ -15,14 +15,14 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 600);
-  noLoop(); 
-  extract();  
-  //img = loadImage("assets/world.jpg");    
+  noLoop();
+  extract();
+  //img = loadImage("assets/world.jpg");
   gif = loadGif('assets/spin.gif');
 }
 
 function draw() {
-  background(235);
+  background(245);
 
   var lineheight = 20;
   var margin = 40;
@@ -31,8 +31,8 @@ function draw() {
   cx = width/2;
   cy = height/2;
 
-  title = "Top Stories in The New York Times\' World Section currently covers:";
-  
+  title = "TOP STORIES IN  The New York Times\'  WORLD SECTION COVERS:";
+
   textSize(25);
   textFont('Georgia');
   textAlign(CENTER);
@@ -44,16 +44,16 @@ function draw() {
 
   textSize(18);
   textFont(myFont);
-  text(message, cx/6, cy/3, cx, 500);    //display the string of all countries 
+  text(message, cx/6, cy/2, cx, 500);    //display the string of all countries
   //console.log(message);
-  
-  //ellipse(cx+(cx/2), cy-20, 120, 120);
+  fill("#C79C6E");
+  ellipse(cx+(cx/2), cy-20, 150, 150);  //to represent the world or globe
   image(gif,cx+(cx/2), cy-20);
 }
 
 function extract() {
 
-  for (var i = 0; i < nytResponse.results.length; i++) { 
+  for (var i = 0; i < nytResponse.results.length; i++) {
     var s = nytResponse.results[i].geo_facet;
     append(facets, s);
     space = ' ';
