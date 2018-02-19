@@ -1,9 +1,11 @@
 var title = [];
 var facets = [];
 var dates = [];
+var times = [];
+var time = [];
+var myDictionary;
 
 function preload() {
-
   //API call
   var url = "https://api.nytimes.com/svc/topstories/v2/world.json";
   var apikey = "b2f0cb834a204d0ba9e21e733fecb353";
@@ -15,9 +17,10 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   background(0);
-
+  noLoop();
   extract();     //User-defined function
 }
+
 
 function draw() {
   background("#252525");
@@ -31,7 +34,6 @@ function draw() {
   textAlign(CENTER);
   textFont('Trebuchet MS');
   textSize(40);
-  //fill("$DCEDC8");
   fill("#30B096");
   text("TOP STORIES & TIME OF CREATION",width/2,50);
   fill("#CAF270");
@@ -45,25 +47,36 @@ function draw() {
 
   fill("#CAF270");
   noStroke();
-  //when you hover over the circle
+  //when you hover over a circle
   if (dist(mouseX, mouseY, cx, cy+5) < 15) {
     text("Headline",width/2,cy/2);
     console.log("selected");
-  } else {
-    //background(255);
-    console.log("no");
   }
-
-
   //draw circle on timeline that is interactive
   ellipse(cx ,cy+5, 25, 25);
 
+
+  for (var i = 0; i < facets.length; i++) {
+
+    var words = facets[i];
+    var date_and_time = split(facets[i],'T');
+    append(dates,date_and_time[0]);
+    append(times,date_and_time[1]);
+  }
+
+  //console.log(myDictionary);
+
+  for (key in myDictionary){
+    myDictionary.get(key);
+  }
+
+  
 
 }
 
 function extract() {
 
-  var myDictionary = createStringDict('Times','Title');
+  myDictionary = createStringDict('Times','Title');
 
   for (var i = 0; i < nytResponse.results.length; i++) {
     var s = nytResponse.results[i].created_date;
@@ -73,7 +86,6 @@ function extract() {
 
     myDictionary.create(s,h);   //Add each of the titles and the corresponding date of creation to myDictionary
   }
-  //myDictionary.sort();
-  //console.log(myDictionary);
+  myDictionary.remove('Times');       //Remove the first key-value pair that isn't from API
   //myDictionary.print();
 }
