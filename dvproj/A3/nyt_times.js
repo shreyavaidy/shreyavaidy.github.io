@@ -3,6 +3,7 @@ var facets = [];
 var dates = [];
 var times = [];
 var time = [];
+var dict = {};
 
 function preload() {
 
@@ -27,19 +28,18 @@ function draw() {
   fill(200);
 
   var lineheight = 25;
-  var margin = 50;
+  var margin = 70;
 
   push();
 
   textStyle(BOLD);
   textAlign(CENTER);
   textFont('Trebuchet MS');
-  textSize(40);
+  textSize(42);
   //fill("$DCEDC8");
   fill("#30B096");
   text("TOP STORIES & TIME OF CREATION",width/2,50);
   fill("#CAF270");
-  textSize(40);
   text("TOP STORIES & TIME OF CREATION",width/2+2,53);
   pop();
 
@@ -47,30 +47,39 @@ function draw() {
   fill("#c6e2ff");
   textSize(15);
 
-  for (var i = 0; i < facets.length; i++) {
+  //Getting all the keys in the dictionary
+  keys = Object.keys(dict);
+  //Sorting the keys in the dictionary -- DateTimeStamp in this case
+  keys.sort();
+  console.log(keys);
 
-    var words = facets[i];
-    var date_and_time = split(facets[i],'T');
-    append(dates,date_and_time[0]);
-    append(times,date_and_time[1]);
+  for (var i=0; i<keys.length; i++) {     // now lets iterate in sort order
+    var key = keys[i];
+    var value = dict[key];
+    text(value, 0, i*lineheight);
+    //text(key, 500, i*lineheight);
+  } 
 
-    //text(facets[i], 0, i*lineheight);
-    text(title[i], 10, i*lineheight);
+  for (var i = 0; i < keys.length; i++) {
+    var date_and_time = split(keys[i],'T');
+    append(dates, date_and_time[0]);
+    append(times, date_and_time[1]);
+    //Draw the dates of the articles 
+    fill("#CAF270");
     text(dates[i], 700, i*lineheight);
   }
 
   for(var i=0; i < times.length; i++){
     var t = split(times[i],'-');
     append(time, t[0]);
-    text(time[i], 825, i*lineheight);
+    fill("#30B096");
+    textStyle(BOLD);
+    text(time[i], 815, i*lineheight);
   }
-
 
 }
 
 function extract() {
-
-  var myDictionary = createStringDict('Times','Title');
 
   for (var i = 0; i < nytResponse.results.length; i++) {
     var s = nytResponse.results[i].created_date;
@@ -78,7 +87,7 @@ function extract() {
     append(facets, s);
     append(title,h);
 
-    myDictionary.create(s,h);   //Add each of the titles and the corresponding date of creation to myDictionary
+    dict[s] = h;  //Add each of the titles and the corresponding date of creation to myDictionary
   }
   //myDictionary.sort();
   //console.log(myDictionary);
