@@ -1,15 +1,17 @@
 var table;
-var bldgCounts = [];
+var cValues = [];
 var maxFloors, minFloors, maxCount, minCount;
 
 // Display "Loading..." on the screen so we see something's happening
 function preload(){
-  table = loadTable('EBE_data.csv', 'csv', 'header');
+  table = loadTable('assets/EBE_data.csv', 'csv', 'header');
 }
 
 // In this sketch everything happens in setup
 function setup() {
   createCanvas(windowWidth, windowHeight);
+    translate(40,40);
+
   loadData();
 }
 
@@ -23,20 +25,16 @@ function loadData() {
 
   // create array with size of all possible floor counts
   // each starting at value 0
-  for(var i = 0; i < maxFloors + 1; i++) {
-    append(bldgCounts, 0);
+  for(var i = 0; i < maxContract + 1; i++) {
+    append(cValues, 0);
   }
 
-  // iterate through all floor counts and
-  // count how many of each building type there are
   for(var i = 0; i < contractValue.length; i++){
-    bldgCounts[contractValue[i]]++;
+    cValues[contractValue[i]]++;
   }
 
-  mostCommonFloorFreq = max(bldgCounts)
+  mostRepeated = max(cValues)
 
-  // You could do drawing inside setup() like this, but this is
-  // like noLoop() in that everything you write here goes on one frame.
   textSize(40);
   textStyle(BOLD);
   text("There are " + contractValue.length + " buildings in Manhattan.", 20,40);
