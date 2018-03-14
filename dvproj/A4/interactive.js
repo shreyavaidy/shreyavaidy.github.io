@@ -1,18 +1,11 @@
-// Display "Loading..." on the screen so we see something's happening
-function preload(){
-  table = loadTable('assets/min_EBE_data.csv', 'csv', 'header');
-}
-
 // In this sketch everything happens in setup
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-    translate(40,40);
+  createCanvas(1200, 600);
 
-  loadData();
-}
+  r = random(255);
+  g = random(255);
+  b = random(255);
 
-function loadData() {
-	var contractValue = table.getColumn("Job_Exp1_Value_of_Contract");
 }
 
 function draw() {
