@@ -1,22 +1,21 @@
-/ Five moving bodies
 var movers = [];
 
 // Liquid
 var liquid;
 
 function setup() {
-  createCanvas(1200, 800);
+  createCanvas(1200, 650);
   reset();
-
   // Create liquid object
-  liquid = new Liquid(0, height/2, width, height/2, 0.1);
+  liquid = new Liquid(0, height/4, width/3, height/4, 0.1);
 }
 
 function draw() {
-  background(127);
+  background("#fdd7d0");
+  noStroke();
 
-  // Draw water
   liquid.display();
+  fill("#ccaaa2");
 
   for (var i = 0; i < movers.length; i++) {
 
@@ -116,9 +115,9 @@ Mover.prototype.update = function() {
 
 Mover.prototype.display = function() {
   stroke(0);
-  strokeWeight(2);
-  fill(255,127);
-  ellipse(this.position.x,this.position.y,this.mass*16,this.mass*16);
+  strokeWeight(1);
+  fill(232,127);
+  rect(this.position.x,this.position.y,this.mass*16,this.mass*16);
 };
 
 // Bounce off bottom of window
