@@ -15,8 +15,15 @@ function setup() {
 }
 
 function draw() {
-  background("#fdd7d0");
+  //background("#fdd7d0");
+  background("#FDDCB1");
+  
   noStroke();
+
+  var s = second();
+  var m = minute();
+  var h = hour();
+  var time = h+":"+m+":"+s;
 
   liquid.display();
   fill("#ccaaa2");
@@ -75,7 +82,7 @@ Liquid.prototype.contains = function(m) {
 Liquid.prototype.calculateDrag = function(m) {
   // Magnitude is coefficient * speed squared
   var speed = m.velocity.mag();
-  var dragMagnitude = this.c * speed * speed;
+  var dragMagnitude = this.c * speed * m;
 
   // Direction is inverse of velocity
   var dragForce = m.velocity.copy();
@@ -115,7 +122,7 @@ Mover.prototype.update = function() {
 };
 
 Mover.prototype.display = function() {
-  stroke("#ccaaa2");
+  stroke("#006699");
   strokeWeight(2);
   //fill(,127);
   quad(this.position.x,this.position.y,this.mass*16,this.mass*16);
