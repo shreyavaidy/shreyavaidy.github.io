@@ -1,5 +1,6 @@
 // Demonstration of multiple force acting on bodies (Mover class)
-//Here forces have been reinterpreted as the hour and minute hitting them
+// Here forces have been reinterpreted as the hour and minute hitting them and affecting the movement
+
 
 var hands = [];
 
@@ -28,6 +29,8 @@ function draw() {
   liquid.display();
   fill("#ccaaa2");
 
+  console.log(hands.length);
+  
   for (var i = 0; i < hands.length; i++) {
 
     // Is the Mover in the liquid?
