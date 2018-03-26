@@ -15,9 +15,10 @@ A graph of the data visualized added to the repository. (in a misleading manner 
   - Used a charting and data visualising tool plot.ly (https://plot.ly/create/) to create the resulting sketch from the data set.
   - Drew a scatter-plot of the entire dataset.
       * Used the x-axis to represent the names of the cereals.
-      * Used the y-axis to represent the calories of each of the cereals. Deployed truncation of the y-axis to emphasize the disparities or misleading nature of the values. The range is set to (-50, 750) and the values all fall between 50 to 
+      * Used the y-axis to represent the calories of each of the cereals. Deployed truncation of the y-axis to emphasize the disparities or misleading nature of the values. The range is set to (-50, 750) where as the actual value of calories for all of these cereals fall between the range 50 to 150 (for the size taken). 
       * Positioned the labels of the cereals on the x-axis in the top position, while the values are below. Lay user will feel as though the calorie values of all these cereals is really high and very similar to one another because of this positioning. So if the y-axis is not carefully seen, the data set will look skewed and completely high. 
       * Hid the grid lines that may guide users to see which values belong to which cereal in the respective axes. 
       * The sizes of the points represent the cup size which overlaps between the cereals while viewing in this range of x and y axes, leading to more confusion.
       * Moreover, the number of cups is variable in the dataset which makes it unreliable as each portion of the cereal when compared to one another is not the accurate value for varying cup sizes. (represented in colors).
+      * Also tried to incorporate cumulative distortion in the dataset.
       
