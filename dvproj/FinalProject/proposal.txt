@@ -1,0 +1,16 @@
+Final Project Proposal:
+
+* 3 sketches (included in the folder)
+
+* Sources and datasets:
+- https://arxiv.org/pdf/1709.01574.pdf
+- http://www.ccom.ucsd.edu/~cdeotte/papers/GoogleTrends.pdf 
+- https://www.quantinsti.com/blog/sentiment-analysis-in-trading/
+- https://blog.quantopian.com/common-types-of-trading-algorithms/
+- https://www.quantopian.com/posts/google-search-terms-predict-market-movements
+- https://www.csc2.ncsu.edu/faculty/healey/tweet_viz/tweet_app/
+
+* Inspiration:
+- https://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world/up-next
+- r2d3.us
+- algorithms-tour.stitchfix.com
