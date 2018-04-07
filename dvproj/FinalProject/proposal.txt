@@ -9,8 +9,14 @@ Final Project Proposal:
 - https://blog.quantopian.com/common-types-of-trading-algorithms/
 - https://www.quantopian.com/posts/google-search-terms-predict-market-movements
 - https://www.csc2.ncsu.edu/faculty/healey/tweet_viz/tweet_app/
+- https://www.quantinsti.com/blog/sentiment-analysis-news-python/
 
 * Inspiration:
 - https://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world/up-next
 - r2d3.us
 - algorithms-tour.stitchfix.com
+
+*Possible visualization ideas from the internet:
+- https://pin.it/2fxylzpucfs723
+- https://codepen.io/pj_/pen/JMWrqv
+- https://codepen.io/Sphinxxxx/pen/qOOGPj
