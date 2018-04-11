@@ -1,29 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
-h1 {
-  font-weight: bold;
-  font-size: 32px;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-h2 {
-  font-weight: bold;
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
-}
-
-p{
- font-family: "Open Sans", sans-serif; 
- padding-left: 50px;
- padding-top: 50px;
- padding-bottom: 50px;
 }
 
 #app {
@@ -38,9 +16,8 @@ p{
   font-size: 2em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*   justify-content: center; */
   padding: 1em 2em;
-  background-color: #FEFBC4;
 }
 
 textarea {
@@ -99,7 +76,7 @@ textarea {
 #positive {
   grid-column: 1/5;
   grid-row: 3/4;
-  background-color: #195E4B;
+  background-color: #1a237e;
 }
 
 #negative {
@@ -111,7 +88,8 @@ textarea {
 .list-head {
   font-size: 1.3em;
   padding-bottom: 10px;
-  text-decoration: bold;
+  -webkit-text-decoration: bold;
+          text-decoration: bold;
 }
 
 li {

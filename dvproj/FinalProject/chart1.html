@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="UTF-8">
+  <title>Sentiment Analysis</title>
     <!-- Link to CSS files -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Link to JS files -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+    <script src='https://unpkg.com/@trainorpj/sentiment@4.1.4/bundle/bundle.js'></script>
     <script src="../p5.min.js"></script>
     <script src="../p5.dom.min.js"></script>
-    <script src="stripe.js"></script>
+    <!--Link to P5JS Files -->
     <script src="sketch.js"></script>
-
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
-	<script src='https://unpkg.com/@trainorpj/sentiment@4.1.4/bundle/bundle.js'></script>
-
+    <script src="stripe.js"></script>
   </head>
   <body>
 
 
   	<div id="sketch-holder">
-      <!-- First sketch will go here! -->
+      <!-- First sketch will go here! 
     </div>
-
-    <h1> Buy the rumour, Sell the News </h1>
-
+    <h1> Final Project (Headline?) </h1>
+    -->
     <div id="sketch2-holder">
       <!-- Second sketch will go here! -->
     </div>
-    <p> This is where the sentimental analysis explanation will go </p>
-
+    <p> 
+      This is where the sentimental analysis explanation and animation will go. <br>
+      <b> Extract sentiment from Natural Language </b> <br>
+      We will use the Bag of words methology to demonstrate the working 
+    </p>
+    
+    <!-- Sentiment Analysis "Try it yourself component" -->
     <div id="app">
 	  <div id="top" :style="bgc">
     	<div class="labels">
-   	   	<div style="width: 80%;">Type in a phrase</div>
+   	   	<div style="width: 85%;">Type in a phrase</div>
       	<div class="score">Score</div>
     	</div>
     	<div class="interactive">
@@ -49,9 +54,11 @@
       	</div>
     	</template>
   		</div>
-  		<div id="footer" :style="bgc">
+  		<div id="footer">
     		Score is based on (weighted) sum of positive words and negative words, divided by number of words. (Inspired by: https://codepen.io/pj_/)
   		</div>
 	</div>
-  </body>
+  <!-- Link to d3 javascript -->
+  <script  src="js/index.js"></script>
+</body>
 </html>
