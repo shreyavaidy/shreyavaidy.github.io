@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 40vh 1fr 30vh 1fr;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#top {
+  grid-column: 1/9;
+  grid-row: 1/2;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  /*   justify-content: center; */
+  padding: 1em 2em;
+}
+
+textarea {
+  resize: none;
+  font-size: 1em;
+  padding-bottom: 10px;
+  text-align: left;
+  outline: none;
+  width: 80%;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: black solid 1px;
+}
+
+.labels {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.interactive {
+  display: flex;
+}
+
+.score {
+  width: 20%;
+  margin-left: 0 10px;
+  text-align: left;
+}
+
+#middle {
+  grid-column: 1/9;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 3em;
+}
+
+.emoji {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.word-list {
+  color: white;
+  overflow-y: scroll;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+#positive {
+  grid-column: 1/5;
+  grid-row: 3/4;
+  background-color: #1a237e;
+}
+
+#negative {
+  grid-column: 5/9;
+  grid-row: 3/4;
+  background-color: #b71c1c;
+}
+
+.list-head {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  -webkit-text-decoration: bold;
+          text-decoration: bold;
+}
+
+li {
+  padding: 5px 0 5px 10px;
+}
+
+#footer {
+  grid-column: 1/9;
+  grid-row: 4/5;
+  text-align: center;
+  padding: 1em;
+}
