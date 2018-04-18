@@ -28,5 +28,5 @@ function draw() {
   textStyle(BOLD);
   textSize(30);
   textFont('Open Sans');
-  text("Buy the Rumour, Sell the News", windowWidth/2+100, 150); 
+  text("Buy the Rumour, Sell the News", windowWidth/2+100, 150);
 }
