@@ -42,7 +42,6 @@ function makecloud(){
     }
   }
       countdown--;
-<<<<<<< HEAD
 }
 
 function resetBackground(){
