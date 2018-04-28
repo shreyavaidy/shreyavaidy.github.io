@@ -42,4 +42,15 @@ function makecloud(){
     }
   }
       countdown--;
+<<<<<<< HEAD
 }
+
+function resetBackground(){
+  background('white');
+  draw();
+}
+
+setInterval(resetBackground, 3000);
+=======
+}
+>>>>>>> parent of 89592bd... workw11
