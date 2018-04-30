@@ -59,18 +59,21 @@ textarea {
   display: flex;
   justify-content: flex-start;
   font-size: 16px;
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
+  margin-left: 30px;
 }
 
 .interactive {
-  <! -- display: flex; -->
+  display: flex;
+  margin-left: 0px;
+  text-align: center;
 }
 
 .score {
   width: 30%;
-  margin-left: 0 10px;
-  text-align: left;
+  margin-left: 0px;
+  text-align: center;
 }
 
 #middle {

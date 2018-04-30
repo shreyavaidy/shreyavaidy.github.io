@@ -13,7 +13,7 @@ var analyze = function analyze(phrase) {
   };
 };
 
-var emojis = ["^_^", ":D", ":|", ":(", ">.<"];
+var emojis = ["^_^", ":D", ":|", ":(", ">_<"];
 var colors = ["#245F4B", "#7BB46B", "#FFFEE0", "#F99E86", "#E53935"];
 
 //Mapping the colors using scaleOrdinal in D3
@@ -27,7 +27,7 @@ var app = new Vue({
   data: function data() {
     return {
       emojis: emojis,
-      phrase: "Give it a try to see in real time"
+      phrase: "..."
     };
   },
 

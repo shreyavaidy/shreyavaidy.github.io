@@ -15,7 +15,7 @@ function setup() {
 
 
 function draw() {
-  background('#48466D');
+  background('#FFFEE0');
   // Move and display all Stripe objects
   for (var i = 0; i < stripes.length; i ++ ) {
     // Check if mouse is over the Stripe
@@ -24,11 +24,12 @@ function draw() {
     stripes[i].display();
   }
 
-  fill('#FAE3E3');
+  fill('#252525');
   textStyle(BOLD);
-  textSize(30);
+  textSize(45);
   textFont('Open Sans');
   text("Buy the Rumour, Sell the News", windowWidth/2+100, 150);
   textSize(15);
+  textStyle(ITALIC);
   text("Examining Algorithmic trading strategies visually through Sentiment Analysis", windowWidth/2, 200);
 }
