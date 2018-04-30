@@ -4,7 +4,7 @@ var countdown=10;
 
 //Uploading the file as a txt to generate world cloud
 function preload() {
-  inputtext = loadStrings('data.txt');
+  inputtext = loadStrings('newswords.txt');
 }
 
 function setup() {
@@ -16,12 +16,14 @@ function setup() {
   // Joining the lines of input text to get a string instead of an array
   count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
   console.log(count);
+
   // set drawing parameters
   textAlign(CENTER, CENTER);
-  textSize(30);
+  textSize(15);
+  text("Wordcloud from news sentiment", windowWidth/4, 20);
   noStroke();
   //fill(255);
-  //noLoop();
+  noLoop();
   frameRate(2);
 }
 
@@ -37,7 +39,7 @@ function makecloud(){
     for (var i in count) {
     if (count.hasOwnProperty(i)) {
       fill(random(255));
-      textSize(count[i]);
+      //textSize(count[i]);
       text(i, random(width), random(height));
     }
   }
@@ -46,10 +48,7 @@ function makecloud(){
 
 function resetBackground(){
   background('white');
-  draw();
+  //draw();
 }
 
-setInterval(resetBackground, 3000);
-=======
-}
->>>>>>> parent of 89592bd... workw11
+//setInterval(resetBackground, 3000);

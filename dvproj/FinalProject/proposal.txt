@@ -20,3 +20,6 @@ Final Project Proposal:
 - https://pin.it/2fxylzpucfs723
 - https://codepen.io/pj_/pen/JMWrqv
 - https://codepen.io/Sphinxxxx/pen/qOOGPj
+
+ XBZKB5FIWE3K6DB0 - AlphaVantage API Key
+
