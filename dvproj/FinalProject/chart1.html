@@ -18,28 +18,25 @@
     <script src="stripe.js"></script>
   </head>
   <body>
-
-    <p> Examining Algorithmic trading strategies visually through Sentiment Analysis </p>
-      
   	<div id="sketch-holder">
-      <!-- First sketch will go here! --> 
+      <!-- First sketch will go here! -->
     </div>
     <div id="sketch2-holder">
       <!-- Striped sketch here -->
     </div>
-    <p> 
+    <p>
 
       This is where the sentimental analysis explanation and animation will go. <br>
       Extract sentiment from Natural Language <br><br>
-      We will use the 'Bag of words' algorithm to demonstrate the working:- 
+      We will use the 'Bag of words' algorithm to demonstrate the working:-
       <!-- Insert canvas/chart2.js -->
     </p>
 
     <!-- Sentiment Analysis: "Try it yourself component" -->
     <div id="app">
-	  <div id="top" :style="bgc">
+	  <div id="top" :style="bgc" >
     	<div class="labels">
-   	   	<div style="width: 85%;">Type in a phrase</div>
+   	   	<div style="width: 70%;">Type in a phrase</div>
       	<div class="score">Score</div>
     	</div>
     	<div class="interactive">
@@ -49,7 +46,7 @@
   		</div>
   		<div id="middle">
     	<template v-for="emoji in emojis">
-      	<div class="emoji" 
+      	<div class="emoji"
            v-bind:style="{ backgroundColor: getBgc(emoji)}">
         {{emoji}}
       	</div>
@@ -58,9 +55,10 @@
     </div>
     <p> <i> Methodology and credit: </i> <br>
      Score is based on (weighted) sum of positive words and negative words, divided by number of words. (Inspired by: https://codepen.io/pj_/) <br>
-	   Bag of words sentiment analysis example data inspired by https://www.quantinsti.com/blog/sentiment-analysis-in-trading/ 
-    </p> 
-  <!-- Link to d3 javascript -->
+	   Bag of words sentiment analysis example data inspired by https://www.quantinsti.com/blog/sentiment-analysis-in-trading/
+    </p>
+
+  <!-- Link to d3 javascript for sentiment try-it-yourself -->
   <script  src="js/index.js"></script>
 </body>
 </html>

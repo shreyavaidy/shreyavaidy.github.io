@@ -3,7 +3,7 @@ var stripes = [];
 var myFont1;
 
 function setup() {
-  var cnv1 = createCanvas(windowWidth, 200);
+  var cnv1 = createCanvas(windowWidth, 500);
   // Move the canvas to be inside <div id="sketch2-holder">.
   cnv1.parent('sketch2-holder');
 
@@ -29,4 +29,6 @@ function draw() {
   textSize(30);
   textFont('Open Sans');
   text("Buy the Rumour, Sell the News", windowWidth/2+100, 150);
+  textSize(15);
+  text("Examining Algorithmic trading strategies visually through Sentiment Analysis", windowWidth/2, 200);
 }

@@ -1,4 +1,4 @@
-// we've imported the @trainorpj/sentiment library
+// Imported @trainorpj/sentiment library
 var _d = d3,
     scaleThreshold = _d.scaleThreshold,
     scaleOrdinal = _d.scaleOrdinal;
@@ -14,18 +14,20 @@ var analyze = function analyze(phrase) {
 };
 
 var emojis = ["^_^", ":D", ":|", ":(", ">.<"];
-var colors = ["#2979FF", "#81D4FA", "#EDE7F6", "#F48FB1", "#E53935"];
+var colors = ["#245F4B", "#7BB46B", "#FFFEE0", "#F99E86", "#E53935"];
 
+//Mapping the colors using scaleOrdinal in D3
 var emojiColor = scaleOrdinal().domain(emojis).range(colors);
 
-var emojiSentiment = scaleThreshold().domain([-3, -1, 1, 3, 5]).range([].concat(emojis).reverse());
+var emojiSentiment = scaleThreshold().domain([-5, -3, 1, 3, 5]).range([].concat(emojis).reverse());
 
+//Creating a Vue object
 var app = new Vue({
   el: "#app",
   data: function data() {
     return {
       emojis: emojis,
-      phrase: "I love waffles \uD83D\uDE01....\nbut hate pancakes \uD83D\uDCA9"
+      phrase: "Give it a try to see in real time"
     };
   },
 
