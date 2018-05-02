@@ -26,7 +26,7 @@ function backState() {
 }
 
 function nextState() {
-  window.location.href = "chart4.html";
+  window.location.href = "finaldemo.html";
 }
 
 function loadData() {
@@ -42,7 +42,7 @@ function draw(){
   push();
   textStyle(BOLD);
   textSize(35);
-  textFont('Open Sans');
+  textFont('Arial');
   text('How did these words get scored?', 100, 100);
   pop();
 

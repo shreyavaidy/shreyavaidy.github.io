@@ -17,11 +17,11 @@ function setup() {
     angleMode(DEGREES);
 
     button1 = createButton('>');
-    button1.position(100, 650);
+    button1.position(100, 850);
     button1.mousePressed(nextState);
 
     button2 = createButton('<');
-    button2.position(50, 650);
+    button2.position(50, 850);
     button2.mousePressed(backState);
 
     //count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
@@ -38,8 +38,8 @@ function nextState() {
 
 
 function draw() {
-    background(250,128,114);
-    //background("#252525");
+    //background(250,128,114);
+    background("#FF6961");
 
     var amount = 6;
     var spacing = 25;

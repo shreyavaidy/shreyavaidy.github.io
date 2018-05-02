@@ -3,35 +3,37 @@
   width: auto;
   height: auto;
   color: #252525;
-  font-family: "Open Sans", sans-serif;
   text-align: right;
+  font-family: Iceland;
   margin: 20px 0 20px 0;
   background-color:#ffffff;
+  font-size: 4em;
 }
+
 a {
   text-decoration: none;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  font-size: 5em;
 }
 
 p:nth-child(1) a {
   font-family: Iceland;
+  font-size: 2em;
   color: #26D11C;
-  font-size: 10em;
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
 p:nth-child(1) a:hover {
-  color: #26D11C;
   -webkit-animation: none;
   animation: none;
 }
 p:nth-child(2) a {
-  font-size: 10em;
   color: #FF2211;
   font-family: Iceland;
+  font-size: 2em;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
 p:nth-child(2) a:hover {
