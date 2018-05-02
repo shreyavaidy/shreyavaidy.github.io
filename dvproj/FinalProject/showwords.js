@@ -40,9 +40,9 @@ function draw(){
   textFont('Arial');
   text('How did these words get scored?', 100, 100);
 
-  textSize(15);
+  textStyle(NORMAL);
+  textSize(14);
 
-    //Get the names of the boroughs from Table
   for (var r = 0, i=120; r < nor -1 ; r++, i+=12){
       text("{", 190, 120);
       print(table.getString(r, 0));
