@@ -22,16 +22,13 @@ function setup() {
   //fill(255);
   //noLoop();
   frameRate(2);
-    button1 = createButton('>');
-    button1.position(100, 50);
-    button1.mousePressed(nextState);
+  button1 = createButton('>');
+  button1.position(100, 50);
+  button1.mousePressed(nextState);
 
-    button2 = createButton('<');
-    button2.position(50, 50);
-    button2.mousePressed(backState);
-
-    //count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
-    //console.log(count);
+  button2 = createButton('<');
+  button2.position(50, 50);
+  button2.mousePressed(backState);
 }
 
 function backState() {

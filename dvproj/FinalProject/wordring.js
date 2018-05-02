@@ -17,15 +17,12 @@ function setup() {
     angleMode(DEGREES);
 
     button1 = createButton('>');
-    button1.position(100, 850);
+    button1.position(100, 1050);
     button1.mousePressed(nextState);
 
     button2 = createButton('<');
-    button2.position(50, 850);
+    button2.position(50, 1050);
     button2.mousePressed(backState);
-
-    //count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
-    //console.log(count);
 }
 
 function backState() {

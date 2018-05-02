@@ -8,17 +8,14 @@ function setup() {
   createCanvas(1000, 800);
   loadData();
   noLoop();
-    
-    button1 = createButton('>');
-    button1.position(width/2 - 40, 25);
-    button1.mousePressed(nextState);
 
-    button2 = createButton('<');
-    button2.position(width/2 - 80, 25);
-    button2.mousePressed(backState);
+  button1 = createButton('>');
+  button1.position(100, 50);
+  button1.mousePressed(nextState);
 
-    count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
-    //console.log(count);
+  button2 = createButton('<');
+  button2.position(50, 50);
+  button2.mousePressed(backState);
 }
 
 function backState() {
@@ -35,16 +32,13 @@ function loadData() {
 }
 
 function draw(){
-  //background(255,255,255);
   background("#FF6961");
 
-  fill('black');
-  push();
+  fill('#252525');
   textStyle(BOLD);
   textSize(35);
   textFont('Arial');
   text('How did these words get scored?', 100, 100);
-  pop();
 
     //Get the names of the boroughs from Table
   for (var r = 0, i=120; r < nor -1 ; r++, i+=12){
@@ -59,5 +53,6 @@ function draw(){
       var score = table.getString(r,1);
       text(score, 450, i);
   }
-      text("}", 500, i-10);
+
+  text("}", 500, i-10);
 }
