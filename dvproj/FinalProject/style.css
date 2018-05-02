@@ -19,8 +19,10 @@ h2 {
 
 h3 {
   color: #252525;
-  font-size: 14px;
+  font-size: 18px;
   text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 100px;
   padding-bottom: 10px;
 }
@@ -33,7 +35,7 @@ p{
  font-family: "Open Sans", sans-serif;
  padding-left: 50px;
  padding-top: 50px;
- padding-bottom: 50px;
+ padding-bottom: 30px;
 }
 
 #app {
