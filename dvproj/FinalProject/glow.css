@@ -2,11 +2,11 @@
 #container {
   width: auto;
   height: auto;
-  color: #252525;
+  background-color: #252525;
   text-align: right;
   font-family: Iceland;
   margin: 20px 0 20px 0;
-  background-color:#ffffff;
+  color:#ffffff;
   font-size: 4em;
 }
 
