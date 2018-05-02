@@ -4,11 +4,11 @@ var countdown=10;
 
 //Uploading the file as a txt to generate world cloud
 function preload() {
-  inputtext = loadStrings('newswords.txt');
+  inputtext = loadStrings('newswords_2.txt');
 }
 
 function setup() {
-  createCanvas(windowWidth/2, 300);
+  createCanvas(windowWidth/2-100, 300);
   //background("#252525");
   //console.log("Printing");
   
@@ -23,7 +23,7 @@ function setup() {
   text("Wordcloud from news sentiment", windowWidth/4, 20);
   noStroke();
   //fill(255);
-  noLoop();
+  //noLoop();
   frameRate(2);
 }
 
@@ -48,7 +48,7 @@ function makecloud(){
 
 function resetBackground(){
   background('white');
-  //draw();
+  draw();
 }
 
 //setInterval(resetBackground, 3000);

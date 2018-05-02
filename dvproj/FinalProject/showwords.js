@@ -1,0 +1,44 @@
+var nor;
+
+function preload(){
+  table = loadTable('hypothesis/dict.csv', 'csv', 'header');
+}
+
+function setup() {
+  createCanvas(1000, 800);
+  loadData();
+  noLoop();
+}
+
+function loadData() {
+  //count the rows
+  nor = table.getRowCount();
+}
+
+function draw(){
+
+  background(255,255,255);
+
+  fill('black');
+  push();
+  textStyle(BOLD);
+  textSize(35);
+  textFont('Open Sans');
+  text('How did these words get scored?', 100, 100);
+  pop();
+
+    //Get the names of the boroughs from Table
+  for (var r = 0, i=120; r < nor -1 ; r++, i+=12){
+      text("{", 190, 120);
+      print(table.getString(r, 0));
+      var word = table.getString(r,0);
+      text(word, 200, i);
+
+      text(":", 435, i);
+
+      print(table.getString(r, 1));
+      var score = table.getString(r,1);
+      text(score, 450, i);
+  }
+      text("}", 500, i-10);
+}
