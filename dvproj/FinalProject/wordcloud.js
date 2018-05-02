@@ -1,6 +1,6 @@
 var inputtext;
 var count;
-var countdown=10;
+var countdown=5;
 
 //Uploading the file as a txt to generate world cloud
 function preload() {
@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth/2-100, 300);
+  createCanvas(windowWidth, 500);
   //background("#252525");
   //console.log("Printing");
   
@@ -18,9 +18,6 @@ function setup() {
   console.log(count);
 
   // set drawing parameters
-  textAlign(CENTER, CENTER);
-  textSize(15);
-  text("Wordcloud from news sentiment", windowWidth/4, 20);
   noStroke();
   //fill(255);
   //noLoop();
@@ -31,24 +28,21 @@ function draw() {
 
   //Call the function makecloud to draw the wordcloud until countdown
   if(countdown!=0){
-      makecloud();    
+      makecloud(); 
+      countdown--;   
+  }
+  else if(countdown==0){
+    clear();
+    countdown = 4;
   }
 }
 
 function makecloud(){
     for (var i in count) {
     if (count.hasOwnProperty(i)) {
-      fill(random(255));
-      //textSize(count[i]);
+      fill(random(200,0,0));
+      textSize(count[i]+15);
       text(i, random(width), random(height));
     }
   }
-      countdown--;
 }
-
-function resetBackground(){
-  background('white');
-  draw();
-}
-
-//setInterval(resetBackground, 3000);

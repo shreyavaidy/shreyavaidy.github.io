@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Sentiment Analysis</title>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="glow.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Iceland" />
+    
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; text-align:center; margin: 0;} </style>
+    <!-- Link to JS files -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+    <script src='https://unpkg.com/@trainorpj/sentiment@4.1.4/bundle/bundle.js'></script>
+    <script src="../p5.min.js"></script>
+    <script src="../p5.dom.min.js"></script>
+    <!--Link to P5JS Files -->
+    <script src="wordring.js"></script>
+    <script src="stripe.js"></script>
+  </head>
+  <body> 
+    <div id="container">
+      <p><a href="#">BUY</a>  the Rumour</p>
+      <p><a href="#"> SELL </a>   the News</p>
+    </div>
+    <p>
+      Sentiments can often drive the direction of the markets. Hence, traders and other participants in the financial markets seek to gauge the sentiment expressed in news reports/tweets/blog posts. <br> 
+      Traders build automatic trading systems which extract the sentiment from natural language. These trading systems take long/short positions in the markets based on the trading signals generated. These systems can also be combined with other trading systems. The objective at the end of the day is to generate superior returns from the extracted information.
+      <br><br><br>
+      In this data visualization we explore one algorithm that is used to drive the market.
+      <br><br><br>
+      We will use the 'Bag of words' algorithm to demonstrate the working:-
+      <!-- Insert canvas/chart2.js -->
+    </p>
+    <div id="sketch-holder">
+      <!-- First sketch will go here! -->
+    </div>
+    <div id="sketch2-holder">
+      <!-- Striped sketch here -->
+    </div>
+
+    <div id="bagofwords">
+    </div>
+    <!-- Sentiment Analysis: "Try it yourself component" -->
+    <div id="app">
+    <div id="top" :style="bgc" >
+      <div class="labels">
+        <div style="width: 70%;">Type in a phrase</div>
+        <div class="score">Score</div>
+      </div>
+      <div class="interactive">
+        <textarea v-model="phrase"></textarea>
+        <p class="score">{{analysis.comparative}}</p>
+      </div>
+      </div>
+      <div id="middle">
+      <template v-for="emoji in emojis">
+        <div class="emoji"
+           v-bind:style="{ backgroundColor: getBgc(emoji)}">
+        {{emoji}}
+        </div>
+      </template>
+      </div>
+    </div>
+
+    <p> <i> Methodology and credit: </i> <br>
+     Score is based on (weighted) sum of positive words and negative words, divided by number of words. (Inspired by: https://codepen.io/pj_/) <br>
+     Bag of words sentiment analysis example data inspired by https://www.quantinsti.com/blog/sentiment-analysis-in-trading/
+    </p>
+
+  <!-- Link to d3 javascript for sentiment try-it-yourself -->
+  <script  src="js/index.js"></script>
+</body>
+</html>

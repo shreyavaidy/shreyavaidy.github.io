@@ -10,9 +10,6 @@ function preload() {
 			'header');
 }
 
-// using a p5js table object, return an object having
-// the values of the given column, plus the minimum value
-// and maximum value from that column
 function colValsMinMax(tab, colName) {
   let vals = data.getColumn(colName);
   let obj = {
@@ -23,7 +20,7 @@ function colValsMinMax(tab, colName) {
   return obj;
 }
 
-function draw() { 
+function setup() { 
 
   createCanvas(windowWidth, 600);
   
@@ -83,16 +80,13 @@ function draw() {
     strokeWeight(1);
     line(prev_x,prev_y,xpos,ypos);
 
-    //console.log("hello");
-    if(mouseInBounds(prev_x-5,prev_y-5,prev_x+5,prev_y+5)){
-      //console.log("In bounds");
-      rect(xpos+50, ypos+50, 250, 55, 20);
+    console.log("hello");
+    if(mouseInBounds(prev_x,prev_y,xpos,ypos)){
+      console.log("In bounds");
       fill(255);
-      textSize(10);
-      //textAlign(CENTER);
-      //text("Date -"+ date[i], xpos+60, ypos+80);
-      text("Value of NIFTY -"+ypos, xpos+65, ypos+75);
+      text("Value of NIFTY is:"+ypos, 500, 200);
     }
+
   }
 
   for(var i = 1; i<data.getRowCount(); i++){
@@ -113,16 +107,6 @@ function draw() {
     strokeWeight(1);
     line(prev_x2,prev_y2,xpos2,ypos2);
 
-    if(mouseInBounds(prev_x2-5,prev_y2-5,prev_x2+5,prev_y2+5)){
-      //console.log("In bounds");
-      rect(xpos2+50, ypos2+50, 250, 55, 20);
-      fill(255);
-      //textAlign(RIGHT);
-      textSize(10);
-      text("Value of Pharma -"+ypos2, xpos2+65, ypos2+75);
-    }
-
-
   }
 
   //Make lines and labels to show
@@ -141,7 +125,12 @@ function draw() {
 }
 
 function mouseInBounds(x1, y1, x2, y2){
-  //console.log(mouseX);
-  //console.log(mouseY);
+  console.log(mouseX);
   return (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2);
+}
+
+function draw(){
+  fill(255);
+  textSize(40);
+  text("Blah blah blah", 100, 100);
 }

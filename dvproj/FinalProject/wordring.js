@@ -8,14 +8,34 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(700, 700);
+  // Move the canvas to be inside <div id="sketch2-holder">.
+    
+    var cnv1 = createCanvas(700, 700);
+    cnv1.parent('sketch2-holder');
     textAlign(CENTER, CENTER);
     rectMode(CENTER);
     angleMode(DEGREES);
 
-    count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
+    button1 = createButton('>');
+    button1.position(100, 650);
+    button1.mousePressed(nextState);
+
+    button2 = createButton('<');
+    button2.position(50, 650);
+    button2.mousePressed(backState);
+
+    //count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
     //console.log(count);
 }
+
+function backState() {
+    window.location.href = "finaldemo.html";
+}
+
+function nextState() {
+  window.location.href = "chart3.html";
+}
+
 
 function draw() {
     background(250,128,114);
