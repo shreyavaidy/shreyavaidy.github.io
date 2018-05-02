@@ -43,7 +43,7 @@ function nextState() {
 }
 
 function draw() {
-
+  background("#FF6961");
   //Call the function makecloud to draw the wordcloud until countdown
   if(countdown!=0){
       makecloud(); 

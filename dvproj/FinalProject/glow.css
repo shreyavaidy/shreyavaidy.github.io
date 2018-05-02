@@ -20,24 +20,26 @@ a {
 p:nth-child(1) a {
   font-family: Iceland;
   font-size: 2em;
-  color: #26D11C;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
-}
-p:nth-child(1) a:hover {
-  -webkit-animation: none;
-  animation: none;
-}
-p:nth-child(2) a {
-  color: #FF2211;
-  font-family: Iceland;
-  font-size: 2em;
+  color: #26D11C;   
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
-p:nth-child(2) a:hover {
+p:nth-child(1) a:hover {
+  -webkit-animation: none;
+  animation: none;
+}
+
+p:nth-child(2) a {
+  color: #FF2211;
+  font-family: Iceland;
+  font-size: 2em;
   -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+p:nth-child(2) a:hover {
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon2 1.5s ease-in-out infinite alternate;
   animation: neon2 1.5s ease-in-out infinite alternate;
 }
@@ -53,10 +55,10 @@ p:nth-child(2) a:hover {
 }
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #26D11C, 0 0 70px #26D11C, 0 0 80px #26D11C, 0 0 100px #26D11C, 0 0 150px #26D11C;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #26D11C, 0 0 35px #26D11C, 0 0 40px #26D11C, 0 0 50px #26D11C, 0 0 75px #26D11C;
   }
 }
 
@@ -72,9 +74,9 @@ p:nth-child(2) a:hover {
 
 @keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #26D11C, 0 0 70px #26D11C, 0 0 80px #26D11C, 0 0 100px #26D11C, 0 0 150px #26D11C;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #26D11C, 0 0 35px #26D11C, 0 0 40px #26D11C, 0 0 50px #26D11C, 0 0 75px #26D11C;
   }
 }

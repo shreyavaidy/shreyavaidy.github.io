@@ -22,7 +22,7 @@ function setup() {
 }
 
 function backState() {
-    window.location.href = "chart2.html";
+    window.location.href = "chart3.html";
 }
 
 function nextState() {
@@ -35,8 +35,8 @@ function loadData() {
 }
 
 function draw(){
-
-  background(255,255,255);
+  //background(255,255,255);
+  background("#FF6961");
 
   fill('black');
   push();
