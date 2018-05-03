@@ -10,7 +10,7 @@ function preload() {
 function setup() {
   // Move the canvas to be inside <div id="sketch2-holder">.
     
-    var cnv1 = createCanvas(700, 700);
+    var cnv1 = createCanvas(windowWidth,windowHeight);
     cnv1.parent('sketch2-holder');
     textAlign(CENTER, CENTER);
     rectMode(CENTER);
@@ -35,8 +35,7 @@ function nextState() {
 
 
 function draw() {
-    //background(250,128,114);
-    background("#FF6961");
+    background("#fafae5");
 
     var amount = 6;
     var spacing = 25;
@@ -127,7 +126,7 @@ function drawSubtitleText() {
     scale(1.3);
     push();
     fill('#');
-    var msg = '';
+    var msg = 'Random organization of words';
     text(msg, 0, 0);
     pop();
 }

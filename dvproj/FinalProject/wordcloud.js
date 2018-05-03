@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, 500);
+  createCanvas(windowWidth, windowHeight);
   //background("#252525");
   //console.log("Printing");
   
@@ -19,8 +19,6 @@ function setup() {
 
   // set drawing parameters
   noStroke();
-  //fill(255);
-  //noLoop();
   frameRate(2);
   button1 = createButton('>');
   button1.position(100, 50);
@@ -41,6 +39,7 @@ function nextState() {
 
 function draw() {
   background("#FF6961");
+  background('#fafae5');
   //Call the function makecloud to draw the wordcloud until countdown
   if(countdown!=0){
       makecloud(); 

@@ -5,6 +5,7 @@ h1 {
   color: #252525;
   font-size: 32px;
   text-align: left;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 
@@ -28,7 +29,7 @@ h3 {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #FFFEE0;
+  background-color: #fafae5;
 }
 
 p{

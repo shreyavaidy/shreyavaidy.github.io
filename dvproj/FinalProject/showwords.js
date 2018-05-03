@@ -5,7 +5,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1000, 800);
+  createCanvas(windowWidth, windowHeight);
   loadData();
   noLoop();
 
@@ -32,7 +32,7 @@ function loadData() {
 }
 
 function draw(){
-  background("#FF6961");
+  background("#fafae5");
 
   fill('#252525');
   textStyle(BOLD);

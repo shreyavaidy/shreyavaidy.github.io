@@ -3,7 +3,7 @@
   width: auto;
   height: auto;
   background-color: #252525;
-  text-align: right;
+  text-align: center;
   font-family: Iceland;
   margin: 20px 0 20px 0;
   color:#ffffff;
@@ -20,7 +20,7 @@ a {
 p:nth-child(1) a {
   font-family: Iceland;
   font-size: 2em;
-  color: #26D11C;   
+  color: #7BB46B;   
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
@@ -31,7 +31,7 @@ p:nth-child(1) a:hover {
 }
 
 p:nth-child(2) a {
-  color: #FF2211;
+  color: #F99E86;
   font-family: Iceland;
   font-size: 2em;
   -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
@@ -40,8 +40,7 @@ p:nth-child(2) a {
 
 p:nth-child(2) a:hover {
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-  animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: none;
 }
 
 /*glow for webkit*/
