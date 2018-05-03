@@ -23,7 +23,7 @@ function backState() {
 }
 
 function nextState() {
-  window.location.href = "finaldemo.html";
+  window.location.href = "finaldemo.html#app";
 }
 
 function loadData() {
@@ -35,36 +35,37 @@ function draw(){
   background("#fafae5");
 
   fill('#252525');
-  textAlign(CENTER);
   textStyle(BOLD);
 
   textSize(35);
   textFont('Arial');
-  text('How did these words get scored?', 100, 100);
+  text('How did these words get scored?', 150, 100);
 
   textStyle(NORMAL);
   textSize(14);
 
-  for (var r = 0, i=120; r < nor -1 ; r++, i+=12){
-      text("{", 190, 120);
+  text("{", 290, 120);
+  for (var r = 0, i=120; r < nor -1 ; r++, i+=10){
+  
+      //print(table.getString(r, 0));
+      //print(table.getString(r, 1));
 
-      print(table.getString(r, 0));
-      print(table.getString(r, 1));
-
+      fill('#252525');
       var word = table.getString(r,0);
+      text(word, 300, i);
       var score = table.getString(r,1);
- 
-      if(score=="positive"){
-        fill('red');  
-        text(word, 200, i);
-        text(score, 450, i);
-        text(":", 435, i);
+      
+      if(score=="positive"){ 
+        fill('#245F4B');       
+        text(score, 550, i);
+        text(":", 535, i);
       }else if(score=="negative"){
-        fill('green');  
-        text(word, 200, i);
-        text(score, 450, i);
-        text(":", 435, i);
+        fill('#E53935');  
+        text(score, 550, i);
+        text(":", 535, i);
       }   
-      text("}", 500, i-10);   
   }
+
+  fill('#252525');
+  text("}", 620, i-10);   
 }

@@ -44,10 +44,19 @@ function draw() {
   if(countdown!=0){
       makecloud(); 
       countdown--;   
+      push();
+      fill('#252525');
+      textStyle(BOLD);
+      textSize(35);
+      textFont('Arial');
+      text('How did these words get scored?', 150, 50);
+      pop();
   }
   else if(countdown==0){
-    clear();
+    //clear();
+    background('#fafae5');
     countdown = 4;
+
   }
 }
 
