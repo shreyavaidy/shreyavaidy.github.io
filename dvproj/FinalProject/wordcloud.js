@@ -45,16 +45,23 @@ function draw() {
       makecloud(); 
       countdown--;   
       push();
-      fill('#252525');
+      fill('#756300');
       textStyle(BOLD);
-      textSize(35);
+      textSize(40);
       textFont('Arial');
-      text('How did these words get scored?', 150, 50);
+      text('Words occuring more frequently are bigger', 200, 80);
       pop();
   }
   else if(countdown==0){
     //clear();
     background('#fafae5');
+    push();
+    fill('#FEDA15');
+    textStyle(BOLD);
+    textSize(40);
+    textFont('Arial');
+    text('Words occuring more frequently are bigger', 200, 80);
+    pop();
     countdown = 4;
 
   }
