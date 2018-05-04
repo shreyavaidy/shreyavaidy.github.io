@@ -126,7 +126,7 @@ function drawSubtitleText() {
     scale(1.3);
     push();
     fill('#');
-    var msg = 'Random organization of words';
+    var msg = '';
     text(msg, 0, 0);
     pop();
 }

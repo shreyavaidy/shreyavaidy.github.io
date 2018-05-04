@@ -31,31 +31,32 @@
     <H2> Examining Algorithms that drive the Stock Market through visualizations <H2>
     
     <h3>
-      Sentiments can often drive the direction of the markets. Hence, traders and other participants in the financial markets seek to gauge the sentiment expressed in news reports/tweets/blog posts. <BR><BR>
-      Traders build automatic trading systems which extract the sentiment from natural language. These trading systems take long/short positions in the markets based on the trading signals generated.
+      Sentiments can often drive the direction of the stock markets. Traders, analysts and other participants in the financial market seek to gauge the sentiment expressed in news reports/tweets/blog posts. <BR><BR>
+      Recently, it has become more common for these participants to build automatic trading systems which extract the sentiment from natural language. The language used by people in their daily online activity help generate the demand or supply of items in the markey when these automated trading systems take long/short positions in the markets based on the indication of the algorithm.
       <br><br>
       <br>
     </h3>
 
-    <H2> Using the 'Bag of words' algorithm to demonstrate how the sentiment of the market is driven - </H2>
-      In this data visualization we explore the algorithm's workings in the following steps:-<br><br>
-      1. Collect popular words or trends (in my .txt file) <br>
-      2. Extract sentiment from natural language<br>
-      3. Take long/short positions on the trading signals <br><br><br>
-
+    <H2> Here we explore the phenomenon using the 'Bag of words' algorithm </H2> 
+    We shall see the manner in which words in a given document is used to get the strength and sentiment of each phrase - 
+      In this data visualization we explore the algorithm's workings in the three broadly classified steps:-<br><br>
+      1. Collecting popular words or trends (here shown in .txt file) <br>
+      2. Extracting the sentiment from natural language based on count and connotation <br>
+      3. Taking long/short positions on the trading signals <br><br><br>
     <div id="sketch-holder">
       <!-- First sketch will go here! -->
     </div>
     <div id="sketch2-holder">
       <!-- Striped sketch here -->
     </div>
-    <!--
-    <H1> Type a word to see it's score here- </H1>
-     Sentiment Analysis: "Try it yourself component" -->
+    
+
     <div id="app">
     <div id="top" :style="bgc" >
+      <H2> Type a word to see it's Score! Score is based on (weighted) sum of positive words and negative words, divided by total number of words.</H2>
+
       <div class="labels">
-        <div style="width: 70%;">Type in a word/phrase to see it's score here</div>
+        <div style="width: 70%;"></div>
         <div class="score">Score</div>
       </div>
       <div class="interactive">
@@ -87,8 +88,8 @@
     <br> <br> <br>
     <p> <i> Methodology and credit: </i> <br>
      Bag of words sentiment analysis example data inspired by https://www.quantinsti.com/blog/sentiment-analysis-in-trading/<br>
-     Score is based on (weighted) sum of positive words and negative words, divided by number of words. (Inspired by: https://codepen.io/pj_/) <br>
-    </p>
+   <br>
+  </p>
 
   <!-- Link to d3 javascript for sentiment try-it-yourself -->
   <script  src="js/index.js"></script>
