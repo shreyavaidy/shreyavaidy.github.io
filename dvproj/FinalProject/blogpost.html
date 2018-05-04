@@ -24,32 +24,51 @@
         		<h2> FINAL PROJECT - Idea & Methodology </h2>
                 <ul>
 
-								<li> <h4> Proposal / Idea </h4> The idea for this project started out with just wanting to visualize algorithms that play a role in our everyday life. I started thinking about algorithms in different domains and sectors and was most drawn to the algorithms used in the finance sector.</li> <br><br>
+				<li> <h4> Proposal / Idea </h4> The idea for this project started out with just wanting to visualize highly abstracted algorithms that play a role in our everyday life. I started thinking about algorithms in different domains and sectors and was most drawn to the impact that algorithms used in the finance sector have on us.</li> <br><br>
 
-								<li> <h4> Conception </h4>
-									My curiousity to understand the abstractions behind some of these algorithms lead to wanting to represent one to two iterations of it in my final demo.
-									I tried to research algorithms used in banks, stock markets, mutual funds and insurance. I found that the <a href="https://blog.quantopian.com/common-types-of-trading-algorithms/">algorithmic trading </a> practices in stock markets were quite fascinating due to its dynamic nature.
-									I tried to pick a simple and visually stimulating algorithm that is used in the stock market.
-									As I read more on the different trading strategies deployed in these systems, I found that <a href="https://en.wikipedia.org/wiki/Sentiment_analysis">sentiment analysis</a> could be a good topic to showcase.
-									I found some
-									<br> <br>
-								</li>
-								<img src="homepage.png" alt="homepagedesign" width="800" height="400"> <br><br>
-								<li> <h4> Design Process </h4>
-								<ol>
-									From the beginning I wanted to represent a story within one-page with different interactive components. <br>
-									I also wanted to explore the possibility of using 3D representation/WEBGL materials in this project (which I did try but WEBGL for p5JS support is very poor and still in beta). <br><br>
-								</ol>
-								</li>
-								<img src="discard3.png" alt="extractdesign" width="940" height="400"> <br> This was an initial design for showing the different steps in the sentiment analysis algorithm which I broke it down to<br><br>
+				<li> <h4> Conception </h4>
+				<img src="homepage.png" alt="homepagedesign" width="800" height="400">
+				(Alternative to the current homepage)<br><br><br>
+				My curiousity to understand the abstractions behind some of these algorithms lead to wanting to represent one to two iterations of it in my final demo.
+				I tried to research algorithms used in banks, stock markets, mutual funds and insurance. I found that the <a href="https://blog.quantopian.com/common-types-of-trading-algorithms/">algorithmic trading </a> practices in stock markets were quite fascinating due to its dynamic nature. I tried to pick a simple and visually stimulating algorithm that is used in the stock market. As I read more on the different trading strategies deployed in these systems, I found that <a href="https://en.wikipedia.org/wiki/Sentiment_analysis">sentiment analysis</a> could be a good topic to showcase. <br> <br>
+				I found some analysis and research that showed how this was affecting the actual markets and I picked such an analysis/tutorial to use as my dataset in the 'hypothesis' section.<br><br>									
+				<img src="pltshow.png" alt="pltshow	" width="820" height="400"> <br> I ran a python script to get the scores from NIFTY Pharma and compare it with NIFTY stock exchange scores from the period of October 2016 to December 2016. These are the resulting charts when visualizing them. I have tried to incorporate that in my final demo.<br><br>
+									
+				</li>
+								
+				<li> <h4> Design Process </h4>
+			
+				From the beginning I wanted to represent a story within one-page with different interactive components. <br>
+				I also wanted to explore the possibility of using 3D representation/WEBGL materials in this project (which I did try but WEBGL for p5JS support is very poor and still in beta). <br><br>
+				I chose the basic 'bag of words' algorithm to showcase the steps and then started to see if I can break down the entire process into 3/4 chunks. I happened to divide it into 3 parts which I then visualized : (i.) Extract words from documents (ii.) Classify words by frequency (iii.) Score words based on their sentiment and clarity in the phrase (by weighted score) 
+				<br><br>
+				<img src="discard3.png" alt="extractdesign" width="940" height="400"> <br>(This was an initial design for showing the different steps on mousehover the circles)<br><br>
+				I then pivoted to try and display all the visuals within the screen space instead of having small chunks on the screen. So I tried to seperate them into the first page with just the words from the document 'floating in the air' and then clicking through other pages. The <a href="/dvproj/chart3.html">second page</a> is a 'word cloud' that depicts the idea of a 'BAG OF WORDS'. I used the rita.JS library with P5JS to count and display the words in my dataset. I initially also tried to see if I can use the wordcloud concept to display the actual numbers of the stocks from the NIFTY exchange but that resulted in this display - 
+				<img src="discard1.png" alt="tryingnumberedwordcloud" width="900" height="300">(The numbers were decimals which was harder to classify and visualise in the wordcloud format - but it makes an interesting cluttered look I think.)<br><br>
+								
+				As I tried to come visualize the scoring of the words in my dataset, I tried to showcase each individual word and phrased that was scored and display it in the following manner -									
+				<img src="discard2.png" alt="scoring" width="600" height="300" align="center"><br>
+				(Words from the document with scoring - just displayed on canvas initially) <br><br>
 
+				Then, onto actually showcasing the hypothesis was a bit of a struggle as I was trying to see how I can show the peaks and curves of the results. A line chart seemed like the simplest and most effective tool and I tried to use D3 first and then switched to P5JS. I wanted to make two seperate line charts of NIFTY and another with Pharma and have them animate to a combine version in 3D using the WEBGL option - but I learnt later that this 3D feature isn't available on p5JS yet (so I had to resort to one chart with all the information on it). <br>
+				
+				<img src="discard4.png" alt="linegraph_rotated" width="500" height="360"> <br>I also had to rotate the origin to the bottom-left corner as my line graph was looking inaccurate otherwise with the points being plotted to a different scale and order (As shown here - a misrepresentation) <br>
+				I also ran into some inconviniences with the translation of the canvas leading to rotating the display text on all of them too. <br>
+				</li>
+				<li>
+				I learnt that its important to have a paper prototype throughout the design process. I initially started out by drawing out the visuals, but some of them were not very effective when I coded them and then I had to revise. I thought I knew what I had in mind but I ended getting some other results which was sometimes surprising, slightly dissappointing and time consuming overall. I would definitely try to tell others attempting such a thing to be clear and open to new interpretations of the concept. I was struggling with that through the 2nd week. I then had to prevent myself from being distracted and concentrate on the subject that I really wanted to show and how they can be connected.
+				<br>
+				</li>
 
-
-								<img src="discard1.png" alt="tryingnumberedwordcloud" width="900" height="300"> <br><br>
-								<img src="discard2.png" alt="scoring" width="660" height="300" align="center"> <br><br>
-								<img src="discard4.png" alt="linegraph_rotated" width="500" height="360"> <br><br>
-								<img src="pltshow.png" alt="pltshow	" width="900" height="400"> <br><br>
-								</ul>
+				<li> <h4> Credit and Citation: </h4>
+				* Sentiment analysis python scripts and concept from - <a href="https://www.quantinsti.com/blog/sentiment-analysis-news-python/"> https://www.quantinsti.com/blog/sentiment-analysis-news-python/ </a> <br>
+				* Design idea for the wordcloud from - <a href="https://creative-coding.decontextualize.com/intro-to-ritajs/"> https://creative-coding.decontextualize.com/intro-to-ritajs/ </a> <br>
+				* Conceptualization for bag of words from - <a href=""> </a><br>
+				* Inspiration: <br>
+				<a href="https://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world/up-next"> Kevin Slavin's TED TALK on How algorithms shape our world </a>;
+				<a href="r2d3.us"> R2D3 </a>;
+				<a href="algorithms-tour.stitchfix.com"> Stich Fix's algorithm tour <a>
+				</ul>				
           </div>
     </div>
 

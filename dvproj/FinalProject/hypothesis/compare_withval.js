@@ -6,10 +6,13 @@ var isOverCircle;
 function preload() {
     data = loadTable(
       'compare.csv',
-			'csv',
-			'header');
+      'csv',
+      'header');
 }
 
+// using a p5js table object, return an object having
+// the values of the given column, plus the minimum value
+// and maximum value from that column
 function colValsMinMax(tab, colName) {
   let vals = data.getColumn(colName);
   let obj = {
@@ -20,26 +23,27 @@ function colValsMinMax(tab, colName) {
   return obj;
 }
 
-function setup() { 
+function mouseInBounds(x1, y1, x2, y2){
+  //console.log(mouseX);
+  //console.log(mouseY);
+  return (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2);
+}
+
+function draw() { 
 
   createCanvas(windowWidth, 600);
   
-  //moving the origin to the bottom left corner
-  scale(1, -1);
-  translate(0, -height);
-  
+
   console.log(data.getRowCount());
   console.log(data.columns);
   
-  background(50);
-  fill('white');
+  background('#fafae5');
+  fill('#252525');
   stroke(255);
   
   // fetch values and min/max for dates
   dates = data.getColumn("Date");
   //console.log(dates);
-
-  //var myDictionary = createStringDict('Date','ypos');
 
   var ypos = 150;
   var v = ypos;
@@ -61,14 +65,20 @@ function setup() {
   console.log(pharma.min);
   console.log(pharma.max);
 
+
+  push();
+  //moving the origin to the bottom left corner
+  scale(1, -1);
+  translate(0, -height);
+
   for (var i = 1; i < data.getRowCount(); i++) {
-    // x position is NIFTY; y position is date
+    // y position is NIFTY; x position is date
     stroke(255, 128, 128);
+    fill('#252525');
     strokeWeight(10);
 
     let prev_x = map(num[i-1], 150, 520, 100, 1000);
     let prev_y = map(nifty.values[i-1], nifty.min, nifty.max, 100, 400);
-    
     let xpos = map(num[i], 150, 520, 100, 1000);
     let ypos = map(nifty.values[i], nifty.min, nifty.max, 100, 400);
     
@@ -80,57 +90,63 @@ function setup() {
     strokeWeight(1);
     line(prev_x,prev_y,xpos,ypos);
 
-    console.log("hello");
-    if(mouseInBounds(prev_x,prev_y,xpos,ypos)){
-      console.log("In bounds");
-      fill(255);
-      text("Value of NIFTY is:"+ypos, 500, 200);
-    }
-
-  }
-
-  for(var i = 1; i<data.getRowCount(); i++){
-    //x position is Pharma; y position is date
-    stroke(255,255,255);
-    strokeWeight(10);
-
-    let prev_x2 = map(num[i-1], 150, 520, 100,1000);
+    //y position is Pharma; x position is date
     let prev_y2 = map(pharma.values[i-1], pharma.min, pharma.max, 100, 400);
-    
-    let xpos2 = map(num[i], 150, 520, 100, 1000);
     let ypos2 = map(pharma.values[i], pharma.min, pharma.max, 100, 400);
     
-    point(prev_x2,prev_y2);
-    point(xpos2, ypos2);
+    stroke('#252525');
+    strokeWeight(10);
+
+    point(prev_x,prev_y2);
+    point(xpos,ypos2);
 
     //Draw a line between each of the points (color it according to slope?)
     strokeWeight(1);
-    line(prev_x2,prev_y2,xpos2,ypos2);
+    line(prev_x,prev_y2,xpos,ypos2);
+  }
+  pop();
 
+  stroke(255,255,255);
+
+  for(var i = 1; i<data.getRowCount(); i++){
+    
+     //y position is NIFTY, y2 is Pharma; x position is date
+    let prev_x = map(num[i-1], 150, 520, 100, 1000);
+    let prev_y = map(nifty.values[i-1], nifty.min, nifty.max, 100, 400);
+    let xpos = map(num[i], 150, 520, 100, 1000);
+    let ypos = map(nifty.values[i], nifty.min, nifty.max, 100, 400);
+
+    let prev_y2 = map(pharma.values[i-1], pharma.min, pharma.max, 100, 400);
+    let ypos2 = map(pharma.values[i], pharma.min, pharma.max, 100, 400);
+
+    if(mouseInBounds(prev_x-5,prev_y-5,prev_x+5,prev_y+5)){
+      //console.log("In bounds");
+      rect(xpos+50, ypos+50, 250, 55, 20);
+      fill('black');
+      textSize(10);
+      text("Date -"+ date[i], xpos+60, ypos+80);
+      text("Value of NIFTY -"+ypos, xpos+65, ypos+75);
+    }
+
+    if(mouseInBounds(prev_x-5,prev_y2-5,prev_x+5,prev_y2+5)){
+      //console.log("In bounds");
+      rect(xpos2+50, ypos2+50, 250, 55, 20);
+      fill('black');
+      textSize(10);
+      text("Value of Pharma -"+ypos2, xpos2+65, ypos2+75);
+    }
   }
 
+  //fill('white');
   //Make lines and labels to show
-  ellipse(200, 50, 10, 10);
+  ellipse(200, 45, 10, 10);
   textSize(15);
-  textAlign(CENTER,CENTER);
-  //translate(10,10);
-  //rotate(PI/2);
-  text("X Axis:", 100, 50);
-  text("Date", 100, 30);
+  text("X Axis: Date", 50, 50);
   text("-------- NIFTY",220, 50);
   fill(255, 128, 128);
   stroke(255, 128, 128);
-  ellipse(200, 30, 10, 10);
-  text("------- Pharma",220,30);
+  ellipse(200, 70, 10, 10);
+  text("------- Pharma",220, 75);
 }
 
-function mouseInBounds(x1, y1, x2, y2){
-  console.log(mouseX);
-  return (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2);
-}
 
-function draw(){
-  fill(255);
-  textSize(40);
-  text("Blah blah blah", 100, 100);
-}

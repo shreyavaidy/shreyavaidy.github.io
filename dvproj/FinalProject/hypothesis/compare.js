@@ -27,9 +27,6 @@ function draw() {
 
   createCanvas(windowWidth, 600);
   
-  //moving the origin to the bottom left corner
-  scale(1, -1);
-  translate(0, -height);
   
   console.log(data.getRowCount());
   console.log(data.columns);
@@ -64,6 +61,10 @@ function draw() {
   console.log(pharma.min);
   console.log(pharma.max);
 
+  push();
+  //moving the origin to the bottom left corner
+  scale(1, -1);
+  translate(0, -height);
   for (var i = 1; i < data.getRowCount(); i++) {
     // x position is NIFTY; y position is date
     stroke(255, 128, 128);
@@ -124,6 +125,7 @@ function draw() {
 
 
   }
+  pop();
 
   //Make lines and labels to show
   ellipse(200, 50, 10, 10);
