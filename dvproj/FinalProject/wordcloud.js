@@ -1,6 +1,6 @@
 var inputtext;
 var count;
-var countdown=5;
+var countdown=8;
 
 //Uploading the file as a txt to generate world cloud
 function preload() {
@@ -62,7 +62,7 @@ function draw() {
     textFont('Arial');
     text('Words occuring more frequently are bigger', 200, 80);
     pop();
-    countdown = 4;
+    countdown = 8;
 
   }
 }

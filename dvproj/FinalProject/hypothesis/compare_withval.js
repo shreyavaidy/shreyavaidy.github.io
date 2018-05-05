@@ -155,7 +155,7 @@ function draw() {
       text("Value of NIFTY: -"+ypos, 720, 180);
     }
 
-    if(mouseInBounds(prev_x-10,prev_y2-10,prev_x+10,prev_y2+10)){
+    if(mouseInBounds(prev_x-10,ypos2-10,prev_x+10,ypos2+10)){
       //console.log("In bounds");
       rect(700, 150, 250, 55, 20);
       fill('black');
