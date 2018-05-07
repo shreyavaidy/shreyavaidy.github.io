@@ -23,7 +23,7 @@ function backState() {
 }
 
 function nextState() {
-  window.location.href = "finaldemo.html#app";
+  window.location.href = "chart6.html";
 }
 
 function loadData() {
@@ -33,7 +33,7 @@ function loadData() {
 
 function draw(){
   //background("#fafae5");
-  background('#FFA812');
+  background('#fafae5');
 
   fill('#252525');
   textStyle(BOLD);

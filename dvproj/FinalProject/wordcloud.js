@@ -1,6 +1,6 @@
 var inputtext;
 var count;
-var countdown=8;
+var countdown=15;
 
 //Uploading the file as a txt to generate world cloud
 function preload() {
@@ -34,7 +34,7 @@ function backState() {
 }
 
 function nextState() {
-  window.location.href = "chart6.html";
+  window.location.href = "chart4.html";
 }
 
 function draw() {
@@ -56,7 +56,7 @@ function draw() {
     //clear();
     background('#fafae5');
     push();
-    fill('#FEDA15');
+    fill('#756310');
     textStyle(BOLD);
     textSize(40);
     textFont('Arial');

@@ -32,7 +32,7 @@ function setup() {
 }
 
 function backState() {
-  window.location.href = "chart3.html";
+  window.location.href = "chart4.html";
 }
 
 function nextState() {
@@ -50,7 +50,7 @@ function draw() {
   textStyle(BOLD);
   textSize(35);
   textFont('Arial');
-  text('How did these words get scored?', 150, 100);
+  text('How did these words get scored?', 200, 100);
   pop();
 
   text('All phrases from our document have been grouped with their positive or negative sentiment score', 200, 120);
@@ -80,7 +80,7 @@ function draw() {
     rect(0, offset-100, angleSeparation*1, animatedHeight);
     textStyle(BOLD);
     textFont(20);
-    
+
     fill('#245F4B');
     if(i>=11 && i<44){
       fill('#E53935');
