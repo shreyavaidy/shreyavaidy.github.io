@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/glow.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Iceland" />
-    
+
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
     <style> body {padding: 0; text-align:center; margin: 0;} </style>
     <!-- Link to JS files -->
@@ -21,24 +21,25 @@
     <script src="wordring.js"></script>
     <script src="stripe.js"></script>
   </head>
-  <body> 
+  <body>
 
     <div id="container">
       <p><a href="#">BUY</a> the Rumour</p>
       <p><a href="#"> SELL </a> the News</p>
     </div>
-
+    <br>
+    <br>
+    <br>
     <H2> Examining Algorithms that drive the Stock Market through visualizations <H2>
-    
+
     <h3>
       Sentiments can often drive the direction of the stock markets. Traders, analysts and other participants in the financial market seek to gauge the sentiment expressed in news reports/tweets/blog posts. <BR><BR>
-      Recently, it has become more common for these participants to build automatic trading systems which extract the sentiment from natural language. The language used by people in their daily online activity help generate the demand or supply of items in the markey when these automated trading systems take long/short positions in the markets based on the indication of the algorithm.
-      <br><br>
-      <br>
+      Recently, it has become more common for these participants to build automatic trading systems which extract the sentiment from natural language.
+      The language used by people in their daily online activity help generate the demand or supply of items in the markey when these automated trading systems take long/short positions in the markets based on the indication of the algorithm.
     </h3>
 
-    <H2> Here we explore the phenomenon using the 'Bag of words' algorithm </H2> 
-    We shall see the manner in which words in a given document is used to get the strength and sentiment of each phrase - 
+    <H2> Here we explore the phenomenon using the 'Bag of words' algorithm </H2>
+    We shall see the manner in which words in a given document is used to get the strength and sentiment of each phrase - <br>
       In this data visualization we explore the algorithm's workings in the three broadly classified steps:-<br><br>
       1. Collecting popular words or trends (here shown in .txt file) <br>
       2. Extracting the sentiment from natural language based on count and connotation <br>
@@ -49,7 +50,7 @@
     <div id="sketch2-holder">
       <!-- Striped sketch here -->
     </div>
-    
+
 
     <div id="app">
     <div id="top" :style="bgc" >
@@ -73,12 +74,12 @@
       </template>
       </div>
     </div>
-    
+
     <h2> The Hypothesis </h2>
     <h3>
-    There have been several instances of wherein this algorithm and approach have been used to sway the market. <br> 
+    There have been several instances of wherein this algorithm and approach have been used to sway the market. <br>
     Investors buy stocks while they are bullish according to the popularity of the things spoken by people on the internet and then have the power to move and sway the market to make it bearish in just a few days time.
-    <br> 
+    <br>
     <br>
     Shown below is a plot of NIFTY vs NIFTY Pharma for the months of October-November 2016. It highlights some of the press releases on which the sentiment analysis model was run. <br><br>
     The impact of the uncertainty regarding the US Presidential election results, and the negative news for the Indian Pharma sector emanating from the US is clearly visible on NIFTY Pharma as it fell substantially from the highs made in late October’2016. One could say that our attempt to gauge the direction of the Pharma Index follows a trend of the actual market very closely.

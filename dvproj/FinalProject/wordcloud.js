@@ -11,7 +11,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   //background("#252525");
   //console.log("Printing");
-  
+
   //Using concordance() from RiTa.JS to obtain the word cloud
   // Joining the lines of input text to get a string instead of an array
   count = RiTa.concordance(inputtext.join(" "));      //count stores the total number of words in the string
@@ -34,7 +34,7 @@ function backState() {
 }
 
 function nextState() {
-  window.location.href = "chart4.html";
+  window.location.href = "chart6.html";
 }
 
 function draw() {
@@ -42,8 +42,8 @@ function draw() {
   background('#fafae5');
   //Call the function makecloud to draw the wordcloud until countdown
   if(countdown!=0){
-      makecloud(); 
-      countdown--;   
+      makecloud();
+      countdown--;
       push();
       fill('#756300');
       textStyle(BOLD);
