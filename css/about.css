@@ -21,7 +21,7 @@ body {
 
 .fade
 {
-        transition:all 0.3s ease;
+        transition:all 0.5s ease;
         opacity:0.5;
 }
 .fade:hover
@@ -65,6 +65,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 /**** SOCIAL MEDIA ICONS FOOTER ***/
 .footer-social-icons {
     width: 400px;
