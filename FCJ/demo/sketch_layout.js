@@ -19,6 +19,6 @@ function draw(){
   textStyle(BOLD);
   fill("white")
   textSize(10)
-  text('Follow the\n\n' +'\nbuy\nsell\nhold \ntrade',map(winMouseX,0,windowWidth/3,0,0),0)
+  text('Follow the\n\n' +'\n  buy\n sell\n  hold \n trade',map(winMouseX,0,windowWidth/3,0,0),0)
 
 }

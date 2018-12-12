@@ -250,10 +250,6 @@ Highcharts.stockChart('container', {
         text: 'History of stock market crashes',
         align: 'left'
     },
-    subtitle: {
-        text: 'Source: Wikipedia',
-        align: 'left'
-    },
     rangeSelector: {
         buttons: [{
             type: 'year',
@@ -326,7 +322,6 @@ Highcharts.stockChart('container', {
         }
     },
     series: [{
-        //pointStart: -10950249600000,
         pointStart: Date.UTC(1625, 0, 1),
         pointInterval: 5,
         pointIntervalUnit: 'year',
@@ -360,7 +355,7 @@ Highcharts.stockChart('container', {
             enabled: true,
             align: 'left',
             format: '{point.options.lbl}',
-            backgroundColor: '#999999',
+            backgroundColor: '#3CB371',
             style: {
                 width: '300px',
                 color: '#FFFFFF',
@@ -395,7 +390,6 @@ Highcharts.stockChart('container', {
                 e;
 
             e = chart.pointer.normalize(event);
-            // Firefox uses e.detail, WebKit and IE uses wheelDelta
             delta = e.detail || -(e.wheelDelta / 120);
             delta = delta < 0 ?
                 (axis.reversed ? -1 : 1) :
