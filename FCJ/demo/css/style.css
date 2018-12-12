@@ -108,3 +108,15 @@ nav ul a:hover {
   width: 850px;
   color: rgb(57,57,57);
   font-size: 12px;
+}
+
+#container {
+  height: 400px;
+  max-width: 800px;
+  margin: auto;
+  background-color:#e6f1df;
+}
+
+.highcharts-tooltip span {
+  white-space: normal !important;
+}
