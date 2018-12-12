@@ -1,0 +1,110 @@
+body {
+  background-color:#e6f1df;
+}
+
+p {
+  font-family: 'Libre Baskerville', serif;
+  padding-left: 250px;
+  color: black
+  font-size: 12px;
+  text-align: left;
+  display: block;
+}
+p2 {
+  padding-left; 220px;
+  text-align: left;
+  display: block;
+}
+h1 {
+  
+  font-family:'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
+  padding-top: 1em;
+  padding-left: 250px;
+  color: black;
+  font-size: 48px;
+  line-height:8px
+}
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  padding-left: 250px;
+  padding-bottom: 20px;
+  color: rgb(57,57,57);
+  font-size: 15px;
+  line-height:1px
+}
+
+h3 {
+  font-family:'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
+  color: black;
+  padding-left: 250px;
+  font-size: 24px;
+  line-height:8px
+  }
+
+container{
+ list-style-type: none;
+ font-family: 'Libre Baskerville', serif;
+ font-size: 12px;
+ text-decoration: none;
+}
+
+nav {
+  list-style-type: none;
+  font-family: 'Libre Baskerville', serif;
+  float: left;
+  text-align: right;
+    max-width: 400px;
+    margin: 0;
+    padding-bottom: 10px;
+  text-decoration: none;
+}
+
+nav ul a{
+  list-style-type: none;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  padding-left: 40px;
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding-bottom: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul b{
+  list-style-type: none;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  padding-left: 40px;
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding-bottom: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul a:hover {
+  list-style-type: none;
+    color: rgb(157,157,157);
+  font-style: italic;
+}
+.column {
+    width:700px;
+    float:left;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  padding-left: 40px;
+  padding-top: 0px;
+}
+
+.column_middle {
+
+    width: 1000px;
+  padding-left: 240px;
+}
+
+.footer {
+  font-family: 'Libre Baskerville', serif;
+  width: 850px;
+  color: rgb(57,57,57);
+  font-size: 12px;
