@@ -28,7 +28,6 @@ body {
     display: table;
     clear: both;
 }
-
 .fade
 {
         transition:all 0.3s ease;
