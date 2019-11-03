@@ -11,9 +11,9 @@
 
 body {
   margin: 60px auto;
-  width: 70%;
+  width: 80%;
   font-family: "Helvetica Neue", sans-serif;
-  background: #252525;
+  background-color: #171717;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
@@ -29,6 +29,7 @@ body {
         opacity:1;
 }
 nav ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
