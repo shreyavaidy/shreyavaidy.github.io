@@ -4,9 +4,7 @@
 body {
     margin: 60px auto;
     width: 80%;
-    background-color: #d7dde5;
     background-color: #171717;
-    color: #ffffff;
 }
 
 .column {
@@ -34,6 +32,7 @@ body {
 {
         transition:all 0.3s ease;
         opacity:0.5;
+        position: sticky;
 }
 .fade:hover
 {
@@ -100,7 +99,8 @@ ul {
 .footer-social-icons {
     width: 350px;
     display:block;
-    margin: 0 auto;
+    margin: 1em;
+
 }
 .social-icon {
     color: #fff;
@@ -164,28 +164,4 @@ ul.social-icons {
 }
 .fa-linkedin:hover {
     background-color: #0073a4;
-}
-.fa-behance {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #322f30;
-}
-.fa-behance:hover {
-    background-color: #e25714;
-}
-.fa-google-plus {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #322f30;
-}
-.fa-google-plus:hover {
-    background-color: #FF0000;
 }
