@@ -1,0 +1,67 @@
+body {
+  background: #171717;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color:#ffffff;
+}
+
+figure {
+  max-width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 128px;
+  height: 16px;
+  background: #333;
+  color: #ddd;
+  font-size: 14px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.legend {
+  columns: 3 200px;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+li {
+  line-height: 2em;
+  
+  span {
+    margin-right: 5px;
+  }
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  top: 3px;
+  
+
+  &-cs {
+    background: #efeaea;
+  }
+  &-devigner {
+    background: #c9baaa;
+  }
+  &-freelancer {
+    background: #95c3b2;
+  }
+  &-backend {
+    background: #bfc492;
+  }
+  &-unicorn {
+    background: #a3b48b;
+  }
+}

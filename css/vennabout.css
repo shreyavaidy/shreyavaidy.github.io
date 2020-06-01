@@ -1,0 +1,314 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 60px auto;
+  width: 80%;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #171717;
+}
+
+.fade
+{
+        transition:all 0.3s ease;
+        opacity:0.5;
+        position: sticky;
+}
+.fade:hover
+{
+        opacity:1;
+}
+
+nav ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li {
+    padding:10px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.2em;
+    color: #fad3d1;
+    display: inline;
+    margin-right: 10px;
+}
+h1{
+    font-size: 4em;
+    font-family:'Lato';
+    color: #efeaea;
+}
+h2{  
+    font-size: 2.5em;
+    padding-top: 20px;
+    font-family:'Lato';
+    color: #efeaea;
+}
+h3{
+    font-size: 1.5em;
+    padding-top: 20px;
+    font-family:'Lato';
+    color: #fad3d1;
+}
+a {
+    text-decoration: none;
+    color: #ee6d66;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.0em;
+    font-family:'Helvetica';
+    line-height: 1.4em;
+    color: #ffffff; 
+    text-align: center;
+}
+
+/**** SOCIAL MEDIA ICONS FOOTER ***/
+.footer-social-icons {
+    width: 400px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 350px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-github {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-github:hover {
+    background-color: #6cc644;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-instagram:hover {
+    background-color: #eb8231;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #F45B69;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #F45B69;
+}
+
+.timeline ul li div {
+  /*visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out; */
+}
+
+/*-------- Skills ------*/
+.divLeft {
+    padding-top: 10px;
+    width:200px;
+    display:block;
+    float: left;
+    color: #ffffff;
+}
+.divRight {
+    padding-top: 10px;
+    width:200px;
+    display:block;
+    float: right;
+    color: #ffffff;
+}
+
+/*-------- Venn Stylesheet ------*/
+
+figure {
+  max-width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 128px;
+  height: 16px;
+  background: #333;
+  color: #ddd;
+  font-size: 14px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.legend {
+  columns: 3 200px;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+li {
+  line-height: 2em;
+  
+  span {
+    margin-right: 5px;
+  }
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  top: 3px;
+  
+
+  &-cs {
+    background: #efeaea;
+  }
+  &-devigner {
+    background: #c9baaa;
+  }
+  &-freelancer {
+    background: #95c3b2;
+  }
+  &-backend {
+    background: #bfc492;
+  }
+  &-unicorn {
+    background: #a3b48b;
+  }
+}
